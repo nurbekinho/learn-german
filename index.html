@@ -1,206 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>Learn German</title>
-  <!-- MDB icon -->
-  <link rel="icon" href="" type="image/x-icon">
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
-  <!-- Google Fonts Roboto -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
-  <!-- Bootstrap core CSS -->
-  <link rel="stylesheet" href="css/bootstrap.min.css">
-  <!-- Material Design Bootstrap -->
-  <link rel="stylesheet" href="css/mdb.min.css">
-  <!-- Your custom styles (optional) -->
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<title>Learn German</title>
+		<link rel="icon" href="" type="image/x-icon">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css"><!-- Font Awesome -->
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"><!-- Google Fonts Roboto -->
+		<link rel="stylesheet" href="css/bootstrap.min.css"><!-- Bootstrap core CSS -->
+		<link rel="stylesheet" href="css/mdb.min.css"><!-- Material Design Bootstrap -->
+		<link rel="stylesheet" href="css/style.css"><!-- Custom styles (optional) -->
+	</head>
+	<body>
+		<header><!--Main Navigation-->
+			<nav class="navbar fixed-top navbar-expand-lg navbar-light white scrolling-navbar">
+				<div class="container">
+					<strong class="blue-text">Animals</strong>
+				</div>
+			</nav>
+		</header>
+		<main class="mt-5 pt-5"><!--Main layout-->
+			<div class="container">
+				<section class="text-center">
+					<div class="row mb-4 wow fadeIn"><!--Grid row----------------------------------------->
+						<div class="col-lg-4 col-md-12 mb-4"><!--Grid column-->
+							<div class="card">
+								<div class="view overlay">
+									<img src="assets/sheep.jpg" class="card-img-top" alt="">
+								</div>
+								<div class="card-body">
+									<a id="sheep" href="#" class="btn btn-primary btn-md" onClick="playAudio(this.id)">das Schaf</a>
+									<p class="card-text">Sheep</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-12 mb-4"><!--Grid column-->
+							<div class="card">
+								<div class="view overlay">
+									<img src="assets/turtle.jpg" class="card-img-top" alt="">
+								</div>
+								<div class="card-body">
+									<a id="turtle" href="#" class="btn btn-primary btn-md" onClick="playAudio(this.id)">die Schildkröte</a>
+									<p class="card-text">Turtle</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-12 mb-4"><!--Grid column-->
+							<div class="card">
+								<div class="view overlay">
+									<img src="assets/butterfly.jpg" class="card-img-top" alt="">
+								</div>
+								<div class="card-body">
+									<a id="butterfly" href="#" class="btn btn-primary btn-md" onClick="playAudio(this.id)">der Schmetterling</a>
+									<p class="card-text">Butterfly</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row mb-4 wow fadeIn"><!--Grid row----------------------------------------->
+						<div class="col-lg-4 col-md-12 mb-4"><!--Grid column-->
+							<div class="card">
+								<div class="view overlay">
+									<img src="assets/snake.jpg" class="card-img-top" alt="">
+								</div>
+								<div class="card-body">
+									<a id="snake" href="#" class="btn btn-primary btn-md" onClick="playAudio(this.id)">die Schlange</a>
+									<p class="card-text">Snake</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-12 mb-4"><!--Grid column-->
+							<div class="card">
+								<div class="view overlay">
+									<img src="assets/bull.jpg" class="card-img-top" alt="">
+								</div>
+								<div class="card-body">
+									<a id="bull" href="#" class="btn btn-primary btn-md" onClick="playAudio(this.id)">der Stier</a>
+									<p class="card-text">Bull</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-12 mb-4"><!--Grid column-->
+							<div class="card">
+								<div class="view overlay">
+									<img src="assets/spider.jpg" class="card-img-top" alt="">
+								</div>
+								<div class="card-body">
+									<a id="spider" href="#" class="btn btn-primary btn-md" onClick="playAudio(this.id)">die Spinne</a>
+									<p class="card-text">Spider</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
+		</main><!--Main layout-->
+		<script type="text/javascript" src="js/jquery.min.js"></script><!-- jQuery -->
+		<script type="text/javascript" src="js/bootstrap.min.js"></script><!-- Bootstrap core JavaScript -->
+		<script type="text/javascript">
+			let isPlaying = false;
+			let audio = new Audio();
 
-  <!--Main Navigation-->
-  <header>
-    <!-- Navbar -->
-    <nav class="navbar fixed-top navbar-expand-lg navbar-light white scrolling-navbar">
-      <div class="container">
-        <!-- Brand -->
-        <strong class="blue-text">German words with no English translation</strong>
-        <!-- Collapse -->
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <!-- Links -->
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        </div>
-      </div>
-    </nav>
-    <!-- Navbar -->
-  </header>
-  <!--Main Navigation-->
+			function playAudio(elementId) {
+				if (isPlaying) return;
 
-  <!--Main layout-->
-  <main class="mt-5 pt-5">
-    <div class="container">
+				isPlaying = true;
+				audio.src = "assets/" + elementId + ".mp3";
+				audio.play();
+				audio.addEventListener("ended", audioEndedListener);
+			}
 
-      <!--Section: Cards-->
-      <section class="text-center">
-
-        <!--Grid row-->
-        <div class="row mb-4 wow fadeIn">
-          <!--Grid column-->
-          <div class="col-lg-4 col-md-12 mb-4">
-            <!--Card-->
-            <div class="card">
-              <!--Card image-->
-              <div class="view overlay">
-                <img src="assets/verschlimmbesserung.jpg" class="card-img-top" alt="">
-              </div>
-              <!--Card content-->
-              <div class="card-body">
-              	<a id="verschlimmbesserung" href="#!" class="btn btn-primary btn-md" onClick="playAudio(this.id)">Verschlimmbesserung</a>
-                <!--Text-->
-                <p class="card-text">To make something worse by trying to improve it.</p>
-              </div>
-            </div>
-            <!--/.Card-->
-          </div>
-          <!--Grid column-->
-
-          <!--Grid column-->
-          <div class="col-lg-4 col-md-12 mb-4">
-            <!--Card-->
-            <div class="card">
-              <!--Card image-->
-              <div class="view overlay">
-                <img src="assets/schnapsidee.jpg" class="card-img-top" alt="">
-              </div>
-              <!--Card content-->
-              <div class="card-body">
-              	<a id="schnapsidee" href="#!" class="btn btn-primary btn-md" onClick="playAudio(this.id)">Schnapsidee</a>
-                <!--Text-->
-                <p class="card-text">A term commonly used to indicate that an idea sounds crazy, useless, or completely foolish.</p>
-              </div>
-            </div>
-            <!--/.Card-->
-          </div>
-          <!--Grid column-->
-
-          <!--Grid column-->
-          <div class="col-lg-4 col-md-12 mb-4">
-            <!--Card-->
-            <div class="card">
-              <!--Card image-->
-              <div class="view overlay">
-                <img src="assets/fernweh.jpg" class="card-img-top" alt="">
-              </div>
-              <!--Card content-->
-              <div class="card-body">
-              	<a id="fernweh" href="#!" class="btn btn-primary btn-md" onClick="playAudio(this.id)">Fernweh</a>
-                <!--Text-->
-                <p class="card-text">Describes the feeling of wanting to be somewhere else.</p>
-              </div>
-            </div>
-            <!--/.Card-->
-          </div>
-          <!--Grid column-->
-        </div>
-        <!--Grid row-->
-
-        <!--Grid row-->
-        <div class="row mb-4 wow fadeIn">
-          <!--Grid column-->
-          <div class="col-lg-4 col-md-12 mb-4">
-            <!--Card-->
-            <div class="card">
-              <!--Card image-->
-              <div class="view overlay">
-                <img src="assets/zugzwang.jpg" class="card-img-top" alt="">
-              </div>
-              <!--Card content-->
-              <div class="card-body">
-              	<a id="zugzwang" href="#!" class="btn btn-primary btn-md" onClick="playAudio(this.id)">Zugzwang</a>
-                <!--Text-->
-                <p class="card-text">In a chess, any possible move worsening player's position.</p>
-              </div>
-            </div>
-            <!--/.Card-->
-          </div>
-          <!--Grid column-->
-
-          <!--Grid column-->
-          <div class="col-lg-4 col-md-12 mb-4">
-            <!--Card-->
-            <div class="card">
-              <!--Card image-->
-              <div class="view overlay">
-                <img src="assets/weltschmerz.jpg" class="card-img-top" alt="">
-              </div>
-              <!--Card content-->
-              <div class="card-body">
-              	<a id="weltschmerz" href="#!" class="btn btn-primary btn-md" onClick="playAudio(this.id)">Weltschmerz</a>
-                <!--Text-->
-                <p class="card-text">Feeling sadness even when everything is going well.</p>
-              </div>
-            </div>
-            <!--/.Card-->
-          </div>
-          <!--Grid column-->
-
-          <!--Grid column-->
-          <div class="col-lg-4 col-md-12 mb-4">
-            <!--Card-->
-            <div class="card">
-              <!--Card image-->
-              <div class="view overlay">
-                <img src="assets/erklarungsnot.jpg" class="card-img-top" alt="">
-              </div>
-              <!--Card content-->
-              <div class="card-body">
-              	<a id="erklarungsnot" href="#!" class="btn btn-primary btn-md" onClick="playAudio(this.id)">Erklärungsnot</a>
-                <!--Text-->
-                <p class="card-text">It means the (urgent) need to explain something, that can be either yourself or a situation.</p>
-              </div>
-            </div>
-            <!--/.Card-->
-          </div>
-          <!--Grid column-->
-        </div>
-        <!--Grid row-->
-      </section>
-      <!--Section: Cards-->
-    </div>
-  </main>
-  <!--Main layout-->
-
-  <!-- jQuery -->
-  <script type="text/javascript" src="js/jquery.min.js"></script>
-  <!-- Bootstrap tooltips -->
-  <script type="text/javascript" src="js/popper.min.js"></script>
-  <!-- Bootstrap core JavaScript -->
-  <script type="text/javascript" src="js/bootstrap.min.js"></script>
-  <!-- MDB core JavaScript -->
-  <script type="text/javascript" src="js/mdb.min.js"></script>
-  <!-- Your custom scripts (optional) -->
-  <!--<script type="text/javascript">new WOW().init();</script>-->
-  	<script type="text/javascript">
-  		let isPlaying = false;
-  		let audio;
-
-  		function playAudio(elementId) {
-  			if (isPlaying) return;
-
-  			isPlaying = true;
-  			audio = new Audio("assets/" + elementId + ".mp3");
-  			audio.play();
-  			audio.addEventListener("ended", function(){
-			     audio.currentTime = 0;
-			     isPlaying = false;
-			});
-  		}
-	</script>
-
-</body>
+			function audioEndedListener() {
+				audio.removeEventListener("ended", audioEndedListener);
+				audio.currentTime = 0;
+				isPlaying = false;
+			}
+		</script>
+	</body>
 </html>
